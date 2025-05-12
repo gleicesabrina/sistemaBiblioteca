@@ -1,7 +1,8 @@
-package com.biblioteca;
+package com.biblioteca.demo.Model;
 
 import java.util.HashSet;
 import java.util.Set;
+
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Column;

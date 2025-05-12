@@ -1,4 +1,4 @@
-package com.biblioteca;
+package com.biblioteca.demo.Model;
 
 import java.util.Date;
 
@@ -21,9 +21,8 @@ import lombok.Setter;
 public class Exemplar {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "exemplares_generator")
-    @Column(name = "numSequencia")
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "exemplar_generator")
+    private Long numSequencia;
 
     @Temporal(TemporalType.DATE)
     private Date dataAquisicao;
@@ -32,9 +31,9 @@ public class Exemplar {
     private Double precoPago;
 
     @Column(nullable = false)
-    private Boolean disponibilidade;
+    private Boolean disponibilidade = true;
 
-   @ManyToOne
+    @ManyToOne
     @JoinColumn(name = "id_livro") // nome da coluna FK no banco
     private Livro livro;
 
